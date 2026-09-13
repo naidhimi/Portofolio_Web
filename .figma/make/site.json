@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a modern minimalist portfolio website featuring four projects with detailed pages to highlight individual work and skills effectively.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
