@@ -1,14 +1,14 @@
-import bacayuk1 from "../assets/images/bacayuk1.png";
-import bacayuk2 from "../assets/images/bacayuk2.png";
+import bacayuk1 from "../assets/images/bacayukcompres.png";
+import bacayuk2 from "../assets/images/bacayukcompres2.png";
 
-import agrilink from "../assets/images/agrilink.png";
-import agrilink2 from "../assets/images/agrilink2.png";
+import agrilink from "../assets/images/agrilinkcompres.png";
+import agrilink2 from "../assets/images/agrilinkcompres2.png";
 
-import expansell1 from "../assets/images/expansell1.png";
-import expansell3 from "../assets/images/expansell3.png";
+import expansell1 from "../assets/images/expansellcompress.png";
+import expansell3 from "../assets/images/expanssellcompres2.png";
 
-import canngopi from "../assets/images/CANNGOPI.png";
-import canngopi2 from "../assets/images/CANNGOPI2.png";
+import canngopi from "../assets/images/canngopiicompres.png";
+import canngopi2 from "../assets/images/canngopicompres2.png";
 
 export interface Project {
   id: string;
