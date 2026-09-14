@@ -9,9 +9,16 @@ import siteConfiguration from './.figma/make/site.json'
 export default defineConfig(({ mode }) => {
   // .figma/make/deploy-preview passes `--mode development` for cached-preview builds.
   const emitSourcemaps = mode === 'development'
+  
+  // Only use FIGMA_PUBLIC_URL if we're actually running in Figma Make environment
+  // (when deployment is to Figma, not to external services like Vercel)
+  const isFigmaMakeEnvironment = process.env.FIGMA_DEV_SERVER_HOST !== undefined
+  const basePath = (isFigmaMakeEnvironment && process.env.FIGMA_PUBLIC_URL) 
+    ? `${process.env.FIGMA_PUBLIC_URL}/` 
+    : '/'
 
   return {
-    base: process.env.FIGMA_PUBLIC_URL ? `${process.env.FIGMA_PUBLIC_URL}/` : '/',
+    base: basePath,
     build: {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
